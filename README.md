@@ -6,11 +6,19 @@ you can custom the project manifest
 commands:
 ```bash
 npm install google-extension-cli-poor
-
-npm create-extension
 ```
 
-or quickly crate by use --default
+create a script in your package.json such as
+```json
+{
+  "scripts": {
+    "create": "create-extension --default"
+  },
+}
+or quickly crate by adding --default
+
+```
+then you can use
 ```bash
-npm create-extension --default
+npm run create
 ```
