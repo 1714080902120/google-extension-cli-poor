@@ -1,10 +1,10 @@
 {
   "name": "google-extension-cli-poor",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a poor cli for google extension",
-  "main": "bin/cli.js",
+  "main": "main.js",
   "bin": {
-    "create-extension": "bin/cli.js"
+    "c-goo-ext": "bin/cli.js"
   },
   "type": "module",
   "scripts": {
@@ -14,14 +14,19 @@
     "type": "git",
     "url": "git+https://github.com/1714080902120/google-extension-cli-poor.git"
   },
-  "keywords": ["google extension", "cli", "tool"],
+  "keywords": [
+    "google extension",
+    "cli",
+    "tool"
+  ],
   "author": "1714080902120",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/1714080902120/google-extension-cli-poor/issues"
   },
   "homepage": "https://github.com/1714080902120/google-extension-cli-poor#readme",
-  "dependencies": {
+  "devDependencies": {
+    "commander": "^9.4.0",
     "inquirer": "^9.1.2"
   }
 }

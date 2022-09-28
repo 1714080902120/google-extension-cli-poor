@@ -1,14 +1,25 @@
 #!/usr/bin/env node
+import { Command } from 'commander';
+import chalk from 'chalk';
+import { init } from '../main.js'
 
-import { question } from "../lib/question.js";
-import { initEnv } from "../lib/initEnv.js";
 
-const args = process.argv.slice(2);
+const program = new Command();
 
-let questions = null;
+program.name('google-extension-cli-poor')
+.description('a poor cli for google extension')
+.version('1.0.2')
+.option('-d, --default', 'quickly create a default project which google extension official provide')
+.action(async(options) => {
+  try {
+    await init(options.default)
+    console.log(chalk.green('create success !'))
+  } catch (error) {
+    console.log(chalk.red(`create error: ${error}`))
+  }
+})
 
-if (args.indexOf("--default") === -1) {
-  questions = await question(process.cwd());
-}
+program.command('c-goo-ext').description('create google extension')
 
-initEnv(questions, process.cwd());
+program.parse(process.argv);
+

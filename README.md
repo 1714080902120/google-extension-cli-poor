@@ -5,20 +5,15 @@ you can custom the project manifest
 
 commands:
 ```bash
-npm install google-extension-cli-poor
+npm install google-extension-cli-poor -D
 ```
 
-create a script in your package.json such as
-```json
-{
-  "scripts": {
-    "create": "create-extension --default"
-  },
-}
-or quickly crate by adding --default
-
-```
-then you can use
+and then use
 ```bash
-npm run create
+c-goo-ext
+```
+
+or you can use `-d` / `--default` to create a default project which provide by google extension official
+```bash
+c-goo-ext --default
 ```
