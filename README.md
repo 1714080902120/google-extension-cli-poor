@@ -5,7 +5,7 @@ you can custom the project manifest
 
 commands:
 ```bash
-npm install google-extension-cli-poor -D
+npm install google-extension-cli-poor -g
 ```
 
 and then use
