@@ -8,7 +8,7 @@ const program = new Command();
 
 program.name('google-extension-cli-poor')
 .description('a poor cli for google extension')
-.version('1.0.2')
+.version('1.0.3')
 .option('-d, --default', 'quickly create a default project which google extension official provide')
 .action(async(options) => {
   try {
